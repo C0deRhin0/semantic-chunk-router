@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semantic-chunk-router"
+version = "0.1.0"
+authors = [
+    { name = "Wilfredo Paulo A. Perez III", email = "180542978+C0deRhin0@users.noreply.github.com" }
+]
+description = "A lightweight utility to chunk text documents semantically and route them using embeddings."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.20.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
