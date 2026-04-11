@@ -1,0 +1,8 @@
+[
+  {
+    "id": 0,
+    "category": "rag_pipeline",
+    "text": "We evaluated the RAG pipeline utilizing a sliding chunker. The system successfully chunked and routed inputs, which scaled semantic caching performance.",
+    "expected_chunks": 1
+  }
+]
