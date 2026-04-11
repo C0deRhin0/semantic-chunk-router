@@ -1,8 +1,11 @@
 import re
+import logging
 import numpy as np
 from typing import List, Dict, Any, Optional
 from .embedder import MockEmbedder
 from .exceptions import ConfigurationError
+
+logger = logging.getLogger(__name__)
 
 class SemanticChunker:
     """
@@ -20,6 +23,7 @@ class SemanticChunker:
         self.similarity_threshold = similarity_threshold
         self.max_chunk_size = max_chunk_size
         self.min_sentences_per_chunk = min_sentences_per_chunk
+        logger.info(f'Initialized SemanticChunker with threshold {similarity_threshold}')
 
         if not (0.0 <= similarity_threshold <= 1.0):
             raise ConfigurationError("Similarity threshold must be between 0.0 and 1.0")
