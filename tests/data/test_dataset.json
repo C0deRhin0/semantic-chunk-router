@@ -10,5 +10,11 @@
     "category": "prompt_template",
     "text": "We evaluated the Prompt Template utilizing a cosine similarity. The system successfully chunked and routed inputs, which streamlined RAG workflow.",
     "expected_chunks": 2
+  },
+  {
+    "id": 16,
+    "category": "agent_orchestrator",
+    "text": "We evaluated the Agent Orchestrator utilizing a token limit. The system successfully chunked and routed inputs, which scaled semantic caching performance.",
+    "expected_chunks": 1
   }
 ]

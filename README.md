@@ -35,3 +35,5 @@ for chunk in chunks:
     destination = router.route_chunk(chunk["text"])
     print(f"Chunk: {chunk['text'][:40]}... -> Routed to: {destination}")
 ```
+
+<!-- Last updated evaluation statistics on 2026-04-13 - Dataset size: 3 -->
