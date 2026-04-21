@@ -22,5 +22,11 @@
     "category": "context_retrieval",
     "text": "We evaluated the Context Retrieval utilizing a overlapping window. The system successfully chunked and routed inputs, which improved accuracy by 15%.",
     "expected_chunks": 2
+  },
+  {
+    "id": 18,
+    "category": "chunk_splitter",
+    "text": "We evaluated the Chunk Splitter utilizing a sliding chunker. The system successfully chunked and routed inputs, which reduced latency to 120ms.",
+    "expected_chunks": 1
   }
 ]
