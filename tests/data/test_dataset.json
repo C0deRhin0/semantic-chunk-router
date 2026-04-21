@@ -16,5 +16,11 @@
     "category": "agent_orchestrator",
     "text": "We evaluated the Agent Orchestrator utilizing a token limit. The system successfully chunked and routed inputs, which scaled semantic caching performance.",
     "expected_chunks": 1
+  },
+  {
+    "id": 17,
+    "category": "context_retrieval",
+    "text": "We evaluated the Context Retrieval utilizing a overlapping window. The system successfully chunked and routed inputs, which improved accuracy by 15%.",
+    "expected_chunks": 2
   }
 ]
