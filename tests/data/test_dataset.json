@@ -28,5 +28,11 @@
     "category": "chunk_splitter",
     "text": "We evaluated the Chunk Splitter utilizing a sliding chunker. The system successfully chunked and routed inputs, which reduced latency to 120ms.",
     "expected_chunks": 1
+  },
+  {
+    "id": 19,
+    "category": "semantic_cache",
+    "text": "We evaluated the Semantic Cache utilizing a metadata routing. The system successfully chunked and routed inputs, which optimized token consumption.",
+    "expected_chunks": 2
   }
 ]
