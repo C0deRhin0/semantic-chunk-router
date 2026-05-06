@@ -40,5 +40,11 @@
     "category": "rag_pipeline",
     "text": "We evaluated the RAG pipeline utilizing a semantic similarity threshold. The system successfully chunked and routed inputs, which eliminated redundant retrieval steps.",
     "expected_chunks": 1
+  },
+  {
+    "id": 21,
+    "category": "llm_context_window",
+    "text": "We evaluated the LLM context window utilizing a recursive text splitter. The system successfully chunked and routed inputs, which prevented context truncation.",
+    "expected_chunks": 2
   }
 ]
