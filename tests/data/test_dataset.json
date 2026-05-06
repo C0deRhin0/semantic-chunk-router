@@ -52,5 +52,11 @@
     "category": "semantic_router",
     "text": "We evaluated the Semantic Router utilizing a embedding dimension. The system successfully chunked and routed inputs, which improved semantic search precision.",
     "expected_chunks": 1
+  },
+  {
+    "id": 23,
+    "category": "vector_database",
+    "text": "We evaluated the Vector Database utilizing a hierarchical chunking. The system successfully chunked and routed inputs, which streamlined RAG workflow.",
+    "expected_chunks": 2
   }
 ]
