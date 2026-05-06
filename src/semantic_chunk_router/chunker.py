@@ -29,7 +29,7 @@ class SemanticChunker:
             raise ConfigurationError("Similarity threshold must be between 0.0 and 1.0")
 
     def _split_into_sentences(self, text: str) -> List[str]:
-        # Simple rule-based sentence splitter
+        # Rule-based sentence splitter (v2)
         sentence_endings = re.compile(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s')
         sentences = sentence_endings.split(text)
         return [s.strip() for s in sentences if s.strip()]

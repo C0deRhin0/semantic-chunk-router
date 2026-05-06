@@ -46,5 +46,11 @@
     "category": "llm_context_window",
     "text": "We evaluated the LLM context window utilizing a recursive text splitter. The system successfully chunked and routed inputs, which prevented context truncation.",
     "expected_chunks": 2
+  },
+  {
+    "id": 22,
+    "category": "semantic_router",
+    "text": "We evaluated the Semantic Router utilizing a embedding dimension. The system successfully chunked and routed inputs, which improved semantic search precision.",
+    "expected_chunks": 1
   }
 ]
