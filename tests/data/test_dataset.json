@@ -64,5 +64,11 @@
     "category": "embedding_model",
     "text": "We evaluated the Embedding Model utilizing a cosine similarity. The system successfully chunked and routed inputs, which scaled semantic caching performance.",
     "expected_chunks": 1
+  },
+  {
+    "id": 25,
+    "category": "prompt_template",
+    "text": "We evaluated the Prompt Template utilizing a token limit. The system successfully chunked and routed inputs, which improved accuracy by 15%.",
+    "expected_chunks": 2
   }
 ]
