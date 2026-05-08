@@ -58,5 +58,11 @@
     "category": "vector_database",
     "text": "We evaluated the Vector Database utilizing a hierarchical chunking. The system successfully chunked and routed inputs, which streamlined RAG workflow.",
     "expected_chunks": 2
+  },
+  {
+    "id": 24,
+    "category": "embedding_model",
+    "text": "We evaluated the Embedding Model utilizing a cosine similarity. The system successfully chunked and routed inputs, which scaled semantic caching performance.",
+    "expected_chunks": 1
   }
 ]
