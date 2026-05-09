@@ -82,5 +82,11 @@
     "category": "context_retrieval",
     "text": "We evaluated the Context Retrieval utilizing a sliding chunker. The system successfully chunked and routed inputs, which optimized token consumption.",
     "expected_chunks": 2
+  },
+  {
+    "id": 28,
+    "category": "chunk_splitter",
+    "text": "We evaluated the Chunk Splitter utilizing a metadata routing. The system successfully chunked and routed inputs, which eliminated redundant retrieval steps.",
+    "expected_chunks": 1
   }
 ]
