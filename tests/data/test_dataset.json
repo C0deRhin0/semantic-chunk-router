@@ -76,5 +76,11 @@
     "category": "agent_orchestrator",
     "text": "We evaluated the Agent Orchestrator utilizing a overlapping window. The system successfully chunked and routed inputs, which reduced latency to 120ms.",
     "expected_chunks": 1
+  },
+  {
+    "id": 27,
+    "category": "context_retrieval",
+    "text": "We evaluated the Context Retrieval utilizing a sliding chunker. The system successfully chunked and routed inputs, which optimized token consumption.",
+    "expected_chunks": 2
   }
 ]
