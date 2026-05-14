@@ -100,5 +100,11 @@
     "category": "rag_pipeline",
     "text": "We evaluated the RAG pipeline utilizing a recursive text splitter. The system successfully chunked and routed inputs, which improved semantic search precision.",
     "expected_chunks": 1
+  },
+  {
+    "id": 31,
+    "category": "llm_context_window",
+    "text": "We evaluated the LLM context window utilizing a embedding dimension. The system successfully chunked and routed inputs, which streamlined RAG workflow.",
+    "expected_chunks": 2
   }
 ]
