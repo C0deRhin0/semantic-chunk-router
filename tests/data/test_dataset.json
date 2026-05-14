@@ -94,5 +94,11 @@
     "category": "semantic_cache",
     "text": "We evaluated the Semantic Cache utilizing a semantic similarity threshold. The system successfully chunked and routed inputs, which prevented context truncation.",
     "expected_chunks": 2
+  },
+  {
+    "id": 30,
+    "category": "rag_pipeline",
+    "text": "We evaluated the RAG pipeline utilizing a recursive text splitter. The system successfully chunked and routed inputs, which improved semantic search precision.",
+    "expected_chunks": 1
   }
 ]
