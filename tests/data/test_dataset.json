@@ -106,5 +106,11 @@
     "category": "llm_context_window",
     "text": "We evaluated the LLM context window utilizing a embedding dimension. The system successfully chunked and routed inputs, which streamlined RAG workflow.",
     "expected_chunks": 2
+  },
+  {
+    "id": 32,
+    "category": "semantic_router",
+    "text": "We evaluated the Semantic Router utilizing a hierarchical chunking. The system successfully chunked and routed inputs, which scaled semantic caching performance.",
+    "expected_chunks": 1
   }
 ]
