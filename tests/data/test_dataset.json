@@ -118,5 +118,11 @@
     "category": "vector_database",
     "text": "We evaluated the Vector Database utilizing a cosine similarity. The system successfully chunked and routed inputs, which improved accuracy by 15%.",
     "expected_chunks": 2
+  },
+  {
+    "id": 34,
+    "category": "embedding_model",
+    "text": "We evaluated the Embedding Model utilizing a token limit. The system successfully chunked and routed inputs, which reduced latency to 120ms.",
+    "expected_chunks": 1
   }
 ]
