@@ -124,5 +124,11 @@
     "category": "embedding_model",
     "text": "We evaluated the Embedding Model utilizing a token limit. The system successfully chunked and routed inputs, which reduced latency to 120ms.",
     "expected_chunks": 1
+  },
+  {
+    "id": 35,
+    "category": "prompt_template",
+    "text": "We evaluated the Prompt Template utilizing a overlapping window. The system successfully chunked and routed inputs, which optimized token consumption.",
+    "expected_chunks": 2
   }
 ]
