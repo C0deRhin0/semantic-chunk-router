@@ -130,5 +130,11 @@
     "category": "prompt_template",
     "text": "We evaluated the Prompt Template utilizing a overlapping window. The system successfully chunked and routed inputs, which optimized token consumption.",
     "expected_chunks": 2
+  },
+  {
+    "id": 36,
+    "category": "agent_orchestrator",
+    "text": "We evaluated the Agent Orchestrator utilizing a sliding chunker. The system successfully chunked and routed inputs, which eliminated redundant retrieval steps.",
+    "expected_chunks": 1
   }
 ]
