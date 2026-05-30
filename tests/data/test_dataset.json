@@ -154,5 +154,11 @@
     "category": "semantic_cache",
     "text": "We evaluated the Semantic Cache utilizing a recursive text splitter. The system successfully chunked and routed inputs, which streamlined RAG workflow.",
     "expected_chunks": 2
+  },
+  {
+    "id": 40,
+    "category": "rag_pipeline",
+    "text": "We evaluated the RAG pipeline utilizing a embedding dimension. The system successfully chunked and routed inputs, which scaled semantic caching performance.",
+    "expected_chunks": 1
   }
 ]

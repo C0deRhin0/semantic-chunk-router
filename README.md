@@ -39,3 +39,4 @@ for chunk in chunks:
 <!-- Last updated evaluation statistics on 2026-04-13 - Dataset size: 3 -->
 <!-- Last updated evaluation statistics on 2026-05-08 - Dataset size: 11 -->
 <!-- Last updated evaluation statistics on 2026-05-19 - Dataset size: 19 -->
+<!-- Last updated evaluation statistics on 2026-05-30 - Dataset size: 27 -->
