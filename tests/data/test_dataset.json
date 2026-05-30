@@ -142,5 +142,11 @@
     "category": "context_retrieval",
     "text": "We evaluated the Context Retrieval utilizing a metadata routing. The system successfully chunked and routed inputs, which prevented context truncation.",
     "expected_chunks": 2
+  },
+  {
+    "id": 38,
+    "category": "chunk_splitter",
+    "text": "We evaluated the Chunk Splitter utilizing a semantic similarity threshold. The system successfully chunked and routed inputs, which improved semantic search precision.",
+    "expected_chunks": 1
   }
 ]
