@@ -148,5 +148,11 @@
     "category": "chunk_splitter",
     "text": "We evaluated the Chunk Splitter utilizing a semantic similarity threshold. The system successfully chunked and routed inputs, which improved semantic search precision.",
     "expected_chunks": 1
+  },
+  {
+    "id": 39,
+    "category": "semantic_cache",
+    "text": "We evaluated the Semantic Cache utilizing a recursive text splitter. The system successfully chunked and routed inputs, which streamlined RAG workflow.",
+    "expected_chunks": 2
   }
 ]
