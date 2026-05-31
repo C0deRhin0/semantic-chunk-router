@@ -160,5 +160,11 @@
     "category": "rag_pipeline",
     "text": "We evaluated the RAG pipeline utilizing a embedding dimension. The system successfully chunked and routed inputs, which scaled semantic caching performance.",
     "expected_chunks": 1
+  },
+  {
+    "id": 41,
+    "category": "llm_context_window",
+    "text": "We evaluated the LLM context window utilizing a hierarchical chunking. The system successfully chunked and routed inputs, which improved accuracy by 15%.",
+    "expected_chunks": 2
   }
 ]
