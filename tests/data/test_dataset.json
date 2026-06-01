@@ -178,5 +178,11 @@
     "category": "vector_database",
     "text": "We evaluated the Vector Database utilizing a token limit. The system successfully chunked and routed inputs, which optimized token consumption.",
     "expected_chunks": 2
+  },
+  {
+    "id": 44,
+    "category": "embedding_model",
+    "text": "We evaluated the Embedding Model utilizing a overlapping window. The system successfully chunked and routed inputs, which eliminated redundant retrieval steps.",
+    "expected_chunks": 1
   }
 ]
