@@ -184,5 +184,11 @@
     "category": "embedding_model",
     "text": "We evaluated the Embedding Model utilizing a overlapping window. The system successfully chunked and routed inputs, which eliminated redundant retrieval steps.",
     "expected_chunks": 1
+  },
+  {
+    "id": 45,
+    "category": "prompt_template",
+    "text": "We evaluated the Prompt Template utilizing a sliding chunker. The system successfully chunked and routed inputs, which prevented context truncation.",
+    "expected_chunks": 2
   }
 ]
