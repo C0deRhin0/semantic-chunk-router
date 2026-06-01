@@ -172,5 +172,11 @@
     "category": "semantic_router",
     "text": "We evaluated the Semantic Router utilizing a cosine similarity. The system successfully chunked and routed inputs, which reduced latency to 120ms.",
     "expected_chunks": 1
+  },
+  {
+    "id": 43,
+    "category": "vector_database",
+    "text": "We evaluated the Vector Database utilizing a token limit. The system successfully chunked and routed inputs, which optimized token consumption.",
+    "expected_chunks": 2
   }
 ]
