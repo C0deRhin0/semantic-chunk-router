@@ -196,5 +196,11 @@
     "category": "agent_orchestrator",
     "text": "We evaluated the Agent Orchestrator utilizing a metadata routing. The system successfully chunked and routed inputs, which improved semantic search precision.",
     "expected_chunks": 1
+  },
+  {
+    "id": 47,
+    "category": "context_retrieval",
+    "text": "We evaluated the Context Retrieval utilizing a semantic similarity threshold. The system successfully chunked and routed inputs, which streamlined RAG workflow.",
+    "expected_chunks": 2
   }
 ]
