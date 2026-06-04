@@ -190,5 +190,11 @@
     "category": "prompt_template",
     "text": "We evaluated the Prompt Template utilizing a sliding chunker. The system successfully chunked and routed inputs, which prevented context truncation.",
     "expected_chunks": 2
+  },
+  {
+    "id": 46,
+    "category": "agent_orchestrator",
+    "text": "We evaluated the Agent Orchestrator utilizing a metadata routing. The system successfully chunked and routed inputs, which improved semantic search precision.",
+    "expected_chunks": 1
   }
 ]
