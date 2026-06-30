@@ -1,5 +1,5 @@
-import pytest
 from semantic_chunk_router import SemanticChunker
+
 
 def test_empty_string():
     chunker = SemanticChunker()
