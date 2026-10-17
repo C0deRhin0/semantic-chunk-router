@@ -60,4 +60,3 @@ python -m pytest
 ```
 
 Read [the chunker](src/semantic_chunk_router/chunker.py), [router](src/semantic_chunk_router/router.py), and [offline example](examples/basic_routing.py) for the compact implementation. This library chooses route names; executing tools, invoking LLMs, and writing to vector databases belong to the calling application.
-<!-- Clarify implementation notes for project documentation -->
