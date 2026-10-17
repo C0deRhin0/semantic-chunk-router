@@ -1,42 +1,62 @@
 # Semantic Chunk Router
 
-A Python library to split large documents into semantically coherent chunks based on sentence embedding similarity and route them to different downstream LLMs or Vector DB paths.
+A small Python library for embedding-based sentence chunking and threshold-based routing. Use it to experiment with how document boundaries and route descriptions affect downstream selection.
 
-## Key Features
+## How text becomes a route
 
-- **Semantic Chunker**: Automatically groups sentences based on cosine similarity thresholds.
-- **Semantic Router**: Routes chunked text to specific destinations based on route descriptions.
-- **Zero-Dependency Mock Embedder**: Includes a fallback embedder for testing without external API keys.
+The chunker groups neighboring sentences using cosine similarity. The router compares each chunk with the configured route descriptions and returns the best route that meets its own threshold, or `None`.
 
-## Installation
-
-```bash
-pip install -e .
+```mermaid
+flowchart LR
+D["Document text"]:::source --> S["Sentence splitting"]:::process
+    S --> E["Shared embedder"]:::process
+    E --> C["Similarity-based<br/>chunk boundaries"]:::process
+    C --> R["Compare with<br/>route descriptions"]:::review
+    R -->|threshold met| M["Best route name"]:::result
+    R -->|no match| N["None"]:::result
+    classDef source fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e
+    classDef process fill:#ede9fe,stroke:#7c3aed,color:#3b0764
+    classDef store fill:#dcfce7,stroke:#16a34a,color:#14532d
+    classDef review fill:#fef3c7,stroke:#d97706,color:#78350f
+    classDef result fill:#f1f5f9,stroke:#475569,color:#0f172a
 ```
 
-## Quick Start
+## Install and try it
+
+Requires Python 3.8+ and NumPy; see [pyproject.toml](pyproject.toml).
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+pip install -e .
+python examples/basic_routing.py
+```
 
 ```python
 from semantic_chunk_router import SemanticChunker, SemanticRouter
 from semantic_chunk_router.router import Route
 
-# 1. Initialize chunker
 chunker = SemanticChunker(similarity_threshold=0.82)
-chunks = chunker.chunk_text("This is an LLM agent tutorial. We will configure routing. Oncall notifications will be configured separately.")
+router = SemanticRouter([
+    Route("agents", "Agent orchestration and language models"),
+    Route("oncall", "Paging and incident response"),
+])
 
-# 2. Route chunks
-routes = [
-    Route("llm_agent", "Topics related to agent orchestration and large language models"),
-    Route("oncall", "Oncall notification setups, paging, and system incidents")
-]
-router = SemanticRouter(routes)
-
-for chunk in chunks:
-    destination = router.route_chunk(chunk["text"])
-    print(f"Chunk: {chunk['text'][:40]}... -> Routed to: {destination}")
+for chunk in chunker.chunk_text("Agent orchestration uses language models. Paging handles incidents."):
+    print(chunk["text"], "->", router.route_chunk(chunk["text"]))
 ```
 
-<!-- Last updated evaluation statistics on 2026-04-13 - Dataset size: 3 -->
-<!-- Last updated evaluation statistics on 2026-05-08 - Dataset size: 11 -->
-<!-- Last updated evaluation statistics on 2026-05-19 - Dataset size: 19 -->
-<!-- Last updated evaluation statistics on 2026-05-30 - Dataset size: 27 -->
+## Choosing an embedder
+
+The default `MockEmbedder` produces normalized, deterministic vectors from a hash of the **whole input text**. It requires NumPy but no network, model, or API key. It is useful for exercising interfaces and repeatability; its scores do not measure semantic relevance, so unrelated routing or `None` is expected.
+
+For meaningful semantic behavior, pass a real embedding adapter to both constructors using `embedder=...`. The adapter must expose `embed_text(text)` and return consistent vectors. Use the same model and dimensions for sentences, chunks, and route descriptions; calibrate thresholds on representative labeled examples.
+
+## Development
+
+```bash
+pip install pytest
+python -m pytest
+```
+
+Read [the chunker](src/semantic_chunk_router/chunker.py), [router](src/semantic_chunk_router/router.py), and [offline example](examples/basic_routing.py) for the compact implementation. This library chooses route names; executing tools, invoking LLMs, and writing to vector databases belong to the calling application.
