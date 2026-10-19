@@ -4,9 +4,8 @@ from typing import List, Union
 
 class MockEmbedder:
     """
-    A lightweight, zero-dependency mock embedder that generates reproducible
-    pseudo-embeddings based on word occurrences and hashing.
-    Used for local testing and offline fallback.
+    A NumPy-based mock embedder producing reproducible whole-text hash vectors.
+    Used for interface tests and offline examples, not semantic relevance.
     """
     def __init__(self, dimension: int = 1536):
         self.dimension = dimension

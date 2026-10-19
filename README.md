@@ -33,8 +33,7 @@ python examples/basic_routing.py
 ```
 
 ```python
-from semantic_chunk_router import SemanticChunker, SemanticRouter
-from semantic_chunk_router.router import Route
+from semantic_chunk_router import Route, SemanticChunker, SemanticRouter
 
 chunker = SemanticChunker(similarity_threshold=0.82)
 router = SemanticRouter([
@@ -50,7 +49,7 @@ for chunk in chunker.chunk_text("Agent orchestration uses language models. Pagin
 
 The default `MockEmbedder` produces normalized, deterministic vectors from a hash of the **whole input text**. It requires NumPy but no network, model, or API key. It is useful for exercising interfaces and repeatability; its scores do not measure semantic relevance, so unrelated routing or `None` is expected.
 
-For meaningful semantic behavior, pass a real embedding adapter to both constructors using `embedder=...`. The adapter must expose `embed_text(text)` and return consistent vectors. Use the same model and dimensions for sentences, chunks, and route descriptions; calibrate thresholds on representative labeled examples.
+For meaningful semantic behavior, pass a real embedding adapter to both constructors using `embedder=...`. The router adapter must expose `embed_text(text)`; the chunker also needs `embed_documents(texts)`. Both return consistent vectors. Use the same model and dimensions for sentences, chunks, and route descriptions; calibrate thresholds on representative labeled examples.
 
 ## Development
 
@@ -61,7 +60,7 @@ python -m pytest
 
 Read [the chunker](src/semantic_chunk_router/chunker.py), [router](src/semantic_chunk_router/router.py), and [offline example](examples/basic_routing.py) for the compact implementation. This library chooses route names; executing tools, invoking LLMs, and writing to vector databases belong to the calling application.
 
-The current test suite has a known collection issue: `test_router.py` imports `Route` from the package root, while the class is exposed from `semantic_chunk_router.router`. The offline example uses that implemented import path. The suite should not be presented as passing until that API/test mismatch and its semantic expectations for the mock embedder are reconciled.
+`Route` is exported from the package root and remains available from `semantic_chunk_router.router`. Routing regression tests inject known vectors to check highest-score selection, individual thresholds, ties, and no-match behavior without network calls. Separate tests exercise the offline embedder’s repeatability and exact-text route matching; they do not claim semantic understanding.
 
 ## Captures
 
