@@ -60,3 +60,13 @@ python -m pytest
 ```
 
 Read [the chunker](src/semantic_chunk_router/chunker.py), [router](src/semantic_chunk_router/router.py), and [offline example](examples/basic_routing.py) for the compact implementation. This library chooses route names; executing tools, invoking LLMs, and writing to vector databases belong to the calling application.
+
+The current test suite has a known collection issue: `test_router.py` imports `Route` from the package root, while the class is exposed from `semantic_chunk_router.router`. The offline example uses that implemented import path. The suite should not be presented as passing until that API/test mismatch and its semantic expectations for the mock embedder are reconciled.
+
+## Captures
+
+Offline mock-embedding example. It does not measure semantic quality.
+
+![Semantic Chunk Router: Offline mock-embedding example. It does not measure semantic quality.](docs/screenshots/desktop.webp)
+
+Full capture descriptions and provenance: [captures.json](docs/screenshots/captures.json).

@@ -1,0 +1,14 @@
+{
+  "project": "Semantic Chunk Router",
+  "kind": "CLI evidence",
+  "note": "Offline mock-embedding example. It does not measure semantic quality.",
+  "capturedAt": "2026-10-23T05:41:31.953Z",
+  "screens": [
+    {
+      "file": "desktop.webp",
+      "caption": "Semantic Chunk Router: Offline mock-embedding example. It does not measure semantic quality.",
+      "width": 1440,
+      "height": 1000
+    }
+  ]
+}
